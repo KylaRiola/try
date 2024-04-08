@@ -11,7 +11,7 @@
 <div id="unauthorized" style="float: left;">
     <h1>Unauthorized Access</h1>
     <p>Click the button to download the unauthorized file.</p>
-    <a href ="pup_website.html" attributes-list download>
+    <a href ="index.html" attributes-list download>
        <button type = "button"> Download </button>
     </a>
 </div>
@@ -28,7 +28,7 @@ function authorizeAndDownload() {
     var password = prompt("Please enter the authorization password:");
     if (password === "mypassword") {
         // Replace 'PUP.pdf' with the URL of the authorized file
-        var fileUrl = 'PUP.pdf';
+        var fileUrl = 'index.html';
         window.location.href = fileUrl;
     } else {
         alert("Incorrect password. Authorization failed.");
