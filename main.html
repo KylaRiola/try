@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Example</title>
+</head>
+<body>
+
+<!-- Unauthorized Access Section -->
+<div id="unauthorized" style="float: left;">
+    <h1>Unauthorized Access</h1>
+    <p>Click the button to download the unauthorized file.</p>
+    <a href ="pup_website.html" attributes-list download>
+       <button type = "button"> Download </button>
+    </a>
+</div>
+
+<!-- Authorized Access Section -->
+<div id="authorized" style="float: right;">
+    <h1>Authorized Access</h1>
+    <p>Click the button to authorize and download the authorized file.</p>
+    <button type="button" onclick="authorizeAndDownload()">Download</button>
+</div>
+
+<script>
+function authorizeAndDownload() {
+    var password = prompt("Please enter the authorization password:");
+    if (password === "mypassword") {
+        // Replace 'PUP.pdf' with the URL of the authorized file
+        var fileUrl = 'PUP.pdf';
+        window.location.href = fileUrl;
+    } else {
+        alert("Incorrect password. Authorization failed.");
+    }
+}
+</script>
+
+</body>
+</html>
